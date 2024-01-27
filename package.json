@@ -1,0 +1,41 @@
+{
+  "name": "@tokamak-network/tokamak-l2-token-cli-deploy",
+  "version": "0.0.1",
+  "description": "deploy the erc20, usdc and usdc bridge contract for L2",
+  "main": "index.js",
+  "bin": {
+    "cli": "./index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tokamak-network/tokamak-l2-token-cli-deploy.git"
+  },
+  "keywords": [
+    "ethereum",
+    "erc20",
+    "usdc",
+    "usdc-bridge"
+  ],
+  "files": [
+    "artifacts-deploy/",
+    "src/",
+    "README.md"
+  ],
+  "author": "zena@tokamak.network",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tokamak-network/tokamak-l2-token-cli-deploy/issues"
+  },
+  "homepage": "https://github.com/tokamak-network/tokamak-l2-token-cli-deploy#readme",
+  "devDependencies": {
+    "cli-table3": "^0.6.0",
+    "commander": "^11.1.0",
+    "ethers": "^5.0.0",
+    "hardhat": "^2.19.4",
+    "mocha": "^7.1.2"
+  }
+}
