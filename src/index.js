@@ -18,7 +18,8 @@ async function main() {
 Usage: cli [command] [options]
 
 Command:
-    l2-erc20-deploy             [options]    Deploy the erc20 on L2
+    l2-erc20-deploy             [options]    Deploy ERC20 on L2
+    l2-usdt-deploy              [options]    Deploy USDT on L2
     l1-usdc-bridge-deploy       [options]    Deploy L1 usdc bridge
     l1-usdc-bridge-set          [options]    Set information of L1 usdc bridge
     l2-usdc-and-bridge-deploy   [options]    Deploy L2 USDC and L2 usdc bridge
@@ -27,6 +28,7 @@ Command:
 
 To want to know options of command: use 'cli [command] -h'
     `);
+
 
     } else if (command == "l2-erc20-deploy") {
         program
@@ -56,6 +58,32 @@ To want to know options of command: use 'cli [command] -h'
             program.opts().decimals
         )
         console.log(tokens)
+
+    } else if (command == "l2-usdt-deploy") {
+        program
+            .description('Deploy L2 USDT ')
+            .argument('[options]', 'options')
+            .requiredOption('-r2, --rpc2 <rpc1>', '*L2 rpc url')
+            .requiredOption('-l1t, --l1token <l1token>', '*L1 token address')
+            .requiredOption('-p, --pk <pk>', '*private key of wallet')
+            .parse();
+
+        // console.log(program.opts().rpc2);
+        // console.log(program.opts().l1token);
+
+        const wallets = await getWallets(null, program.opts().rpc2, program.opts().pk);
+
+        const contracts = await L2ERC20Deployer.deployUSDT(
+            wallets.l2Wallet,
+            program.opts().l1token
+        )
+
+        const table = {}
+        for (const item of Object.keys(contracts)) {
+            table[item] = contracts[item].address;
+        }
+
+        console.info(table);
 
     } else if (command == "l1-usdc-bridge-deploy") {
         program
@@ -325,6 +353,8 @@ To want to know options of command: use 'cli [command] -h'
                 table[item] = bridgeContracts[item].address;
             }
             console.info(table);
+    } else {
+        console.log("co command")
     }
 
 }

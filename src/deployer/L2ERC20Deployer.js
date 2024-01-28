@@ -3,6 +3,7 @@ const { Wallet } = require("ethers");
 const artifacts = {
     OptimismMintableERC20Factory: require("../../artifacts-deploy/optimism/contracts/OptimismMintableERC20Factory.json"),
     OptimismMintableERC20: require("../../artifacts-deploy/optimism/contracts/OptimismMintableERC20.json"),
+    USDT: require("../../artifacts-deploy/usdt/contracts/USDT.json"),
   };
 
 
@@ -34,7 +35,6 @@ class L2ERC20Deployer {
         l2TokenSymbol,
         l2TokenDecimals
       ){
-        const StandardBridge = "0x4200000000000000000000000000000000000010"
         const OptimismMintableERC20Factory = "0x4200000000000000000000000000000000000012"
 
         // const createdAddress = buildCreate2Address(
@@ -66,6 +66,32 @@ class L2ERC20Deployer {
           L1Token,
           L2Token
         };
+    }
+
+    static async deployUSDT(
+      actor,
+      l1TokenAddress
+    ){
+      const deployer = new L2ERC20Deployer(actor);
+      const L2StandardBridge = "0x4200000000000000000000000000000000000010"
+      const L2USDT = await deployer.deployContract(
+        artifacts.USDT.abi,
+        artifacts.USDT.bytecode,
+        [l1TokenAddress, L2StandardBridge],
+        actor
+      );
+      return {L2USDT}
+    }
+
+    async deployContract(
+      abi,
+      bytecode,
+      deployParams,
+      actor
+    ){
+        const factory = new ethers.ContractFactory(abi, bytecode, actor);
+        const contractInstance = await factory.deploy(...deployParams);
+        return await contractInstance.deployed();
     }
 }
 
