@@ -3,7 +3,7 @@
 There are two ways to deploy L2 USDC.
 
 - First method: Using the ***l2-usdc-l1-l2-bridge-deploy*** command, you can deploy L2 USDC, L1 usdc bridge, and L2 usdt bridge at once.
-- Second method: You can deploy by executing the **l1-usdc-bridge-deploy, l2-usdc-and-bridge-deploy, and l1-usdc-bridge-set** commands in order.
+- Second method: You can deploy by executing the ***l1-usdc-bridge-deploy, l2-usdc-and-bridge-deploy, and l1-usdc-bridge-set*** commands in order.
 
 Of the two methods above, we recommend the first method.
 
