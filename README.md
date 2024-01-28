@@ -34,7 +34,6 @@ To want to know options of command: use 'cli [command] -h'
 
 run `cli l2-erc20-deploy -h`
 
-****and you should see:
 
 ```jsx
 Usage: cli [command] [options]
@@ -85,7 +84,6 @@ If a token with the same address has already been created, an error will occur, 
 
 run `cli l2-usdt-deploy -h`
 
-****and you should see:
 
 ```jsx
 Usage: cli [command] [options]
@@ -155,7 +153,6 @@ to verify
 
   run `cli l2-usdc-l1-l2-bridge-deploy -h`
 
-****and you should see:
 
 ```jsx
 Usage: cli [command] [options]
@@ -290,7 +287,6 @@ Deploy the L1 usdc bridge, it don’t set necessary storages in deployed L1 usdc
 
   run `cli l1-usdc-bridge-deploy -h`
 
-****and you should see:
 
 ```jsx
 Usage: cli [command] [options]
@@ -326,7 +322,6 @@ run
 
   run `cli l2-usdc-and-bridge-deploy -h`
 
-****and you should see:
 
 ```jsx
 Usage: cli [command] [options]
@@ -410,7 +405,7 @@ Set necessary storages in deployed L1 usdc bridge contract.
 
   run `cli l1-usdc-bridge-set -h`
 
-****and you should see:
+you should see:
 
 ```jsx
 Usage: cli [command] [options]
