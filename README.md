@@ -32,7 +32,9 @@ To want to know options of command: use 'cli [command] -h'
 
 ## Deploy ERC20
 
-run `cli l2-erc20-deploy -h` ****and you should see:
+run `cli l2-erc20-deploy -h`
+
+****and you should see:
 
 ```jsx
 Usage: cli [command] [options]
@@ -81,7 +83,9 @@ If a token with the same address has already been created, an error will occur, 
 
 ## Deploy USDT
 
-run `cli l2-usdt-deploy -h` ****and you should see:
+run `cli l2-usdt-deploy -h`
+
+****and you should see:
 
 ```jsx
 Usage: cli [command] [options]
@@ -149,7 +153,9 @@ to verify
 
 ## Deploy L2 USDC  and L1/L2 usdc bridge at once
 
-  run `cli l2-usdc-l1-l2-bridge-deploy -h` ****and you should see:
+  run `cli l2-usdc-l1-l2-bridge-deploy -h`
+
+****and you should see:
 
 ```jsx
 Usage: cli [command] [options]
@@ -282,7 +288,9 @@ after check the L1 token information
 
 Deploy the L1 usdc bridge, it don’t set necessary storages in deployed L1 usdc bridge contract.   you need to set using *l1-usdc-bridge-set* command after.
 
-  run `cli l1-usdc-bridge-deploy -h` ****and you should see:
+  run `cli l1-usdc-bridge-deploy -h`
+
+****and you should see:
 
 ```jsx
 Usage: cli [command] [options]
@@ -316,7 +324,9 @@ run
 
 ## Deploy L2 USDC and usdc bridge
 
-  run `cli l2-usdc-and-bridge-deploy -h` ****and you should see:
+  run `cli l2-usdc-and-bridge-deploy -h`
+
+****and you should see:
 
 ```jsx
 Usage: cli [command] [options]
@@ -398,7 +408,9 @@ l2UsdcAdmin must be different from l2UsdcProxyAdmin.
 
 Set necessary storages in deployed L1 usdc bridge contract.
 
-  run `cli l1-usdc-bridge-set -h` ****and you should see:
+  run `cli l1-usdc-bridge-set -h`
+
+****and you should see:
 
 ```jsx
 Usage: cli [command] [options]
