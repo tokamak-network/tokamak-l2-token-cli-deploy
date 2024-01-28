@@ -7,6 +7,24 @@ There are two ways to deploy L2 USDC.
 
 Of the two methods above, we recommend the first method.
 
+
+## Index
+
+[Install](##Install)
+
+[Deploy L2 ERC20](#deploy-l2-erc20)
+
+[Deploy L2 USDT](#deploy-l2-usdt)
+
+[Deploy L2 USDC and L1/L2 usdc bridge at once](#deploy-l2-usdc--and-l1l2-usdc-bridge-at-once)
+
+[Deploy L1 usdc bridge](#deploy-l1-usdc-bridge)
+
+[Deploy L2 USDC and usdc bridge](#deploy-l2-usdc-and-usdc-bridge)
+
+[Set L1 usdc bridge](#set-l1-usdc-bridge)
+
+
 ## Install
 
 `npm install @tokamak-network/tokamak-l2-token-cli-deploy`
@@ -30,7 +48,7 @@ Command:
 To want to know options of command: use 'cli [command] -h'
 ```
 
-## Deploy ERC20
+## Deploy L2 ERC20
 
 run `cli l2-erc20-deploy -h`
 
@@ -80,7 +98,7 @@ If a token with the same address has already been created, an error will occur, 
 
 </aside>
 
-## Deploy USDT
+## Deploy L2 USDT
 
 run `cli l2-usdt-deploy -h`
 

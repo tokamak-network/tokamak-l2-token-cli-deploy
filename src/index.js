@@ -118,7 +118,6 @@ To want to know options of command: use 'cli [command] -h'
             .argument('[options]', 'options')
             .requiredOption('-r2, --rpc2 <rpc2>', '*L2 rpc url')
             .requiredOption('-n, --networkName <networkName>', '*network name')
-            .requiredOption('-m1, --l1CrossDomainMessenger <l1CrossDomainMessenger>', '*l1CrossDomainMessenger address')
             .requiredOption('-l1u, --l1Usdc <l1Usdc>', '*l1 usdc address')
             .requiredOption('-l1ub, --l1UsdcBridge <l1UsdcBridge>', '*L1 usdc bridge address')
             .requiredOption('-l2ua, --l2UsdcAdmin <l2UsdcAdmin>', '*L2 USDC owner address')
