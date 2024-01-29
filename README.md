@@ -90,6 +90,18 @@ run
 
 you can get L2 ERC20 address.
 
+**To verify deployed ERC20 contract**
+
+```jsx
+git clone https://github.com/tokamak-network/tokamak-titan-canyon.git
+cd packages/contracts-bedrock
+npm i -g pnpm
+
+`forge verify-contract {L2TOKEN} src/L2/L2StandardBridge.sol:L2StandardBridge --verifier blockscout --verifier-url https://explorer.titan-sepolia-test.tokamak.network/api? --chain-id 111551115050 --constructor-args {L1StandardBridge}`
+```
+
+> `forge verify-contract 0xeC32659a42904a96d415468d3A213e57b13eE5c0 src/L2/L2StandardBridge.sol:L2StandardBridge --verifier blockscout --verifier-url https://explorer.titan-sepolia-test.tokamak.network/api? --chain-id 111551115050 --constructor-args 000000000000000000000000f036e9d5e3c1974dd6be4e36d15666f6e6d59cc7`
+>
 
 <aside>
 💡 ***additional task:***
@@ -164,7 +176,7 @@ to verify
 > npx hardhat compile
 >
 
-> npx hardhat verify {deployed usdt address} {l1token} —network {networkanme}
+> npx hardhat verify {deployed usdt address}  {l2Bridge} { l1token}   —network {network name}
 >
 
 ## Deploy L2 USDC  and L1/L2 usdc bridge at once
