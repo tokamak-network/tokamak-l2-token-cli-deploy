@@ -77,7 +77,7 @@ class L2ERC20Deployer {
       const L2USDT = await deployer.deployContract(
         artifacts.USDT.abi,
         artifacts.USDT.bytecode,
-        [l1TokenAddress, L2StandardBridge],
+        [L2StandardBridge, l1TokenAddress],
         actor
       );
       return {L2USDT}
